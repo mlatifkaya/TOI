@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #ccc;
+  height: 8vh;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  background-color: rgba(30, 29, 29, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 3rem;
+  position: fixed;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0;
+}
+.navbar a:hover {
+  border-bottom: 2px solid goldenrod;
+  color: brown;
+}
+.navbar i:hover {
+  color: red;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.bradd {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.home-content {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: goldenrod;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.feature {
+  text-align: center;
+  margin: 1rem 1rem;
+}
+.feature i {
+  font-size: 2rem;
+  color: teal;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.feature p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.about img {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.about {
+  display: flex;
+  margin-top: 2rem;
+  height: 300px;
+  width: 100%;
+}
+.about-content {
+  width: 50%;
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.9);
+}
+
+.bradd-2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-padding {
+  padding: 2rem 2rem 4rem;
+}
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+/* .flex-grid .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.4rem;
+  }
+  .flex-grid .column {
+    flex: 25%;
+    padding: 0 0.4rem;
+  } */
+/* img {
+    width: 100%;
+    height: auto;
+  } */
+
+.service-img {
+  order: 1;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.col {
+  text-align: center;
+  margin: 1rem 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+}
+.img-p {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.cont-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(51, 51, 51, 0.9);
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(103, 101, 101, 0.9);
+  margin: 0;
+}
+
+.card img {
+  width: 90%;
+  height: 300px;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  scale: 1.1;
+}
+
+.services,
+.dealers {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  padding: 1rem;
+  width: 100%;
+}
+
+.card-s {
+  text-align: center;
+  background-color: rgb(159, 155, 53);
+  padding: 10px;
+  color: white;
+}
+.cards img {
+  width: 100%;
+  max-height: 300px;
+}
+
+.content-services {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.dealer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  flex-direction: column;
+  background-color: rgb(226, 225, 225);
+  margin-bottom: 1rem;
+}
+.dealers img {
+  width: 100%;
+  max-height: 300px;
+}
+.content-dealer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.dealers {
+  padding: 1rem;
+  width: 100%;
+}
+
+.dealers .card-s {
+  background-color: rgb(36, 64, 61);
+  padding: 10px;
+  color: white;
+}
+
+.dealers .card-s h3 {
+  color: brown;
+}
+.dealers .cards img {
+  border-radius: 50%;
+
+  width: 100%;
+  transition: scale 0.3s;
+}
+
+.dealers .cards img:hover {
+  scale: 1.01;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact img {
+  width: 50%;
+  height: 60vh;
+}
+
+.contact-content {
+  width: 50%;
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: rgba(16, 9, 32, 0.9);
+  color: white;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.control-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.control-form label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.control-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+.contact form button {
+  background-color: goldenrod;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgba(51, 51, 51, 1);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+}
+.footer .links-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.footer .links-logos i {
+  color: white;
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  .about img {
+    width: 100%;
+    height: 300px;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .features {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .service-img {
+    order: -1;
+  }
+  .about-content {
+    height: 200px;
+  }
+
+  .dealers {
+    flex-direction: column;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact img {
+    width: 100%;
+    height: 25rem;
+  }
+  .contact-content {
+    width: 100%;
+  }
+}
+
+.f-header {
+  background-color: #571818;
+  border: 1.7px solid #ccc;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.8rem;
+  position: relative;
+}
+
+.user-id {
+  color: #fff;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #d9d476;
+}
+
+.reply-form {
+  margin-top: 10px;
+}
+.reply-form textarea {
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+}
+.replies {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.reply-button {
+  background-color: #1a5f82;
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.user-id h3 {
+  margin: 0;
+  font-size: 16px;
+}

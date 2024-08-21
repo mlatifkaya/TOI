@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header id="home" class="main-header">
+      <div class="navbar">
+        <div class="logo">
+          <h1 class="brand">
+            Project
+            <span>H</span>
+            <i class="fa-solid fa-face-smile"></i>
+          </h1>
+        </div>
+
+        <nav>
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="forum-content">
+      <!-- Ana Mesaj -->
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ...</p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+        <button class="reply-button" onclick="showReplyForm(this)">
+          Reply
+        </button>
+
+        <!-- Cevaplar için yer -->
+        <div class="replies"></div>
+
+        <!-- Cevap Formu -->
+        <div class="reply-form" style="display: none">
+          <textarea placeholder="Write your reply..." required></textarea>
+          <br />
+          <button class="reply-button" onclick="submitReply(this)">
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="links-logos">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Project H</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function showReplyForm(button) {
+        // Cevap formunu aç veya kapat
+        const replyForm = button.nextElementSibling.nextElementSibling;
+        replyForm.style.display =
+          replyForm.style.display === "none" ? "block" : "none";
+      }
+
+      function submitReply(button) {
+        const replyForm = button.parentElement;
+        const textarea = replyForm.querySelector("textarea");
+        const replyText = textarea.value.trim();
+
+        if (replyText === "") {
+          alert("Please write a reply before submitting.");
+          return;
+        }
+
+        // Yeni cevap div'ini oluştur
+        const newReply = document.createElement("div");
+        newReply.classList.add("f-header");
+        newReply.style.marginLeft = "20px";
+        newReply.innerHTML = `
+          <div class="user-id">
+            <h3>User-ID:(654321)</h3>
+          </div>
+          <p>${replyText}</p>
+          <div class="post-f">
+            <h4>Posted Date:</h4>
+            <p>${new Date().toLocaleDateString()}</p>
+          </div>
+          <button class="reply-button" onclick="showReplyForm(this)">Reply</button>
+          <div class="replies"></div>
+          <div class="reply-form" style="display:none;">
+            <textarea placeholder="Write your reply..." required></textarea>
+            <br>
+            <button class="reply-button" onclick="submitReply(this)">Submit</button>
+          </div>
+        `;
+
+        // Yeni cevabı mevcut cevaplar listesine ekle
+        const repliesContainer = replyForm.previousElementSibling;
+        repliesContainer.appendChild(newReply);
+
+        // Formu temizle ve gizle
+        textarea.value = "";
+        replyForm.style.display = "none";
+      }
+    </script>
+
+    <!-- <section style="padding: 5px" class="forum-content">
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+      <div class="f-header">
+        <div class="user-id">
+          <h3>User-ID:(123456)</h3>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit laborum
+          soluta dignissimos optio repudiandae fugit quia! Dolore natus adipisci
+          eum animi illo, rem maxime ab deserunt laborum debitis aliquid?
+          Placeat.
+        </p>
+        <div class="post-f">
+          <h4>Posted Date:</h4>
+          <p>1999/10/10</p>
+        </div>
+      </div>
+    </section> -->
+    <!-- 
+    <div id="contact" class="contact">
+      <img src="https://picsum.photos/200/200?random=32" alt="" />
+      <div class="contact-content">
+        <h3 class="bradd-2" class="bradd-2">Contact Us</h3>
+        <form class="contact-form" action="">
+          <div class="control-form">
+            <label for="name">Name</label>
+            <input placeholder="Your name" id="name" type="text" />
+          </div>
+          <div class="control-form">
+            <label for="name">Email</label>
+            <input placeholder="Your email" id="email" type="email" />
+          </div>
+          <div class="control-form">
+            <label for="name">Phone</label>
+            <input placeholder="Your phone number" id="Phone" type="text" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div> -->
+  </body>
+</html>
